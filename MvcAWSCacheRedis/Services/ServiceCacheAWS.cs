@@ -32,6 +32,7 @@ namespace MvcAWSCacheRedis.Services
             }
             productos.Add(producto);
             json = JsonConvert.SerializeObject(productos);
+            this.cache.StringSet("productoscache", json, TimeSpan.FromMinutes(30));
         }
 
         public List<Producto> GetProductosCache()
