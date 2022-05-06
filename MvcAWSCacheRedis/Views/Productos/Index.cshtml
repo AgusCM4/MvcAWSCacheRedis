@@ -6,6 +6,8 @@
 
 <h1>Index</h1>
 
+<h2>@TempData["MENSAJE"]</h2>
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -50,6 +52,7 @@
             </td>
             <td>
                 <a class="btn btn-primary" asp-controller="Productos" asp-action="Details" asp-route-id="@item.IdProducto">Details</a>
+                <a class="btn btn-warning" asp-controller="Productos" asp-action="SeleccionarFavorito" asp-route-id="@item.IdProducto">Seleccionar Favorito</a>
             </td>
         </tr>
 }
